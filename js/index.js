@@ -79,7 +79,6 @@ const actualizarCarrito = () => {
         div.innerHTML = `
         <p>${prod.nombre}</p>
         <p>Precio:U$S ${prod.precio}</p>
-        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
         <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
         `
 
@@ -91,5 +90,7 @@ const actualizarCarrito = () => {
     
     contadorCarrito.innerText = carrito.length 
     console.log(carrito)
-    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
+    precioTotal.innerText = carrito.reduce((acc, prod) => acc + 1000 * prod.precio, 0)
+
     }
+
